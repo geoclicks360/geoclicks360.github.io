@@ -64,3 +64,36 @@ ul {
 .cta .button:hover {
   background-color: #005a80;
 }
+
+.contact {
+  background: #f0f8ff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+.contact input, .contact textarea {
+  margin: 0.5rem 0;
+  padding: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  background-color: #002b45;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background-color: #005a80;
+}
