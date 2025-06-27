@@ -29,12 +29,22 @@ header .logo {
 
 main {
   padding: 2rem;
-  max-width: 800px;
+  max-width: 960px;
   margin: auto;
 }
 
 h1, h2 {
   font-weight: 600;
+  margin-top: 1rem;
+}
+
+ul {
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.services ul li {
+  margin-bottom: 0.6rem;
 }
 
 .cta {
