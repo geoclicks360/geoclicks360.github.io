@@ -1,99 +1,57 @@
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
+  background: #fff;
   color: #333;
 }
 
-header {
-  background-color: #002b45;
-  color: white;
-  text-align: center;
-  padding: 1.5rem 1rem;
-}
-
-header .banner {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 1rem;
-}
-
-header .logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-main {
-  padding: 2rem;
-  max-width: 960px;
-  margin: auto;
+header, section, footer {
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 800px;
 }
 
 h1, h2 {
-  font-weight: 600;
-  margin-top: 1rem;
+  color: #2c3e50;
 }
 
 ul {
-  padding-left: 1.5rem;
-  list-style: disc;
+  list-style-type: square;
+  padding-left: 20px;
 }
 
-.services ul li {
-  margin-bottom: 0.6rem;
+.testimonial {
+  background: #f9f9f9;
+  border-left: 4px solid #2c3e50;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
 }
 
-.cta {
-  text-align: center;
-  padding: 2rem;
+.testimonial .stars {
+  font-size: 1.2em;
+  color: #f39c12;
+  margin: 0 0 5px;
 }
 
-.cta .button {
-  background-color: #002b45;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
+.testimonial blockquote {
+  margin: 0;
+  font-style: italic;
+}
+
+.testimonial .client {
+  margin-top: 8px;
   font-weight: bold;
+  color: #34495e;
 }
 
-.cta .button:hover {
-  background-color: #005a80;
-}
-
-.contact {
-  background: #f0f8ff;
-  padding: 2rem;
+footer {
+  font-size: 0.9em;
   text-align: center;
-}
-
-.contact form {
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  margin: auto;
-}
-
-.contact input, .contact textarea {
-  margin: 0.5rem 0;
-  padding: 0.8rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-
-.contact button {
-  background-color: #002b45;
-  color: white;
-  padding: 0.8rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.contact button:hover {
-  background-color: #005a80;
+  border-top: 1px solid #ccc;
+  margin-top: 40px;
+  padding-top: 20px;
 }
