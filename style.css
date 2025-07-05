@@ -1,8 +1,1 @@
-body { margin: 0; font-family: 'Segoe UI', sans-serif; background-color: #f9fbfd; color: #333; }
-header.sticky { position: sticky; top: 0; background: #fff; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; }
-.hero { text-align: center; background: linear-gradient(135deg, #1a73e8, #4285F4); color: white; padding: 60px 20px; }
-.hero-logo { max-width: 150px; margin-bottom: 20px; }
-.badge-cta { display: inline-block; background: #1a73e8; color: white; padding: 10px 16px; border-radius: 999px; text-decoration: none; font-weight: 500; font-size: 14px; box-shadow: 0 2px 6px rgba(0,0,0,0.15); margin-top: 15px; }
-.badge-cta:hover { background: #155ab6; }
-.verified-badge { display: inline-block; background: #1a73e8; color: white; font-size: 12px; padding: 3px 8px; border-radius: 20px; margin-left: 6px; font-weight: 500; }
-footer { text-align: center; padding: 20px; background: #f1f1f1; color: #666; font-size: 14px; }
+/* Add your custom styles here if needed */
