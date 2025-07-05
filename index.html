@@ -1,19 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="GeoClicks360 - Helping Local Businesses Grow on Google with 360° Virtual Tours, Business Optimization & Local SEO." />
-  <meta property="og:title" content="GeoClicks360 | Local Visibility Experts" />
-  <meta property="og:description" content="Boost your local business visibility on Google with verified 360° shoots, Google Business optimization, and more." />
-  <meta property="og:image" content="assets/banner.png" />
-  <meta property="og:url" content="https://geoclicks360.github.io/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <title>GeoClicks360 | Local Visibility Experts</title>
-  <link rel="icon" href="assets/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GeoClicks360 Personal CRM</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <header><img src="assets/logo.png" alt="GeoClicks360 Logo" style="max-width:200px;"></header>
-  <h1>Website Working!</h1>
+<body class="bg-gray-50 min-h-screen flex flex-col items-center p-4">
+  <h1 class="text-3xl font-bold mb-6 text-blue-700">GeoClicks360 Personal CRM</h1>
+
+  <form id="contactForm" class="bg-white p-6 rounded shadow-md w-full max-w-md mb-6">
+    <input type="hidden" id="contactId" />
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold" for="name">Name</label>
+      <input id="name" type="text" required class="w-full p-2 border rounded" placeholder="Full Name" />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold" for="email">Email</label>
+      <input id="email" type="email" required class="w-full p-2 border rounded" placeholder="Email Address" />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold" for="phone">Phone</label>
+      <input id="phone" type="tel" class="w-full p-2 border rounded" placeholder="Phone Number" />
+    </div>
+    <div class="mb-4">
+      <label class="block mb-1 font-semibold" for="notes">Notes</label>
+      <textarea id="notes" rows="3" class="w-full p-2 border rounded" placeholder="Additional notes"></textarea>
+    </div>
+    <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">
+      Save Contact
+    </button>
+    <button type="button" id="clearBtn" class="ml-4 text-red-600 hover:underline">Clear All</button>
+  </form>
+
+  <section class="w-full max-w-4xl overflow-x-auto">
+    <table class="min-w-full bg-white rounded shadow overflow-hidden">
+      <thead class="bg-blue-600 text-white">
+        <tr>
+          <th class="py-3 px-4 text-left">Name</th>
+          <th class="py-3 px-4 text-left">Email</th>
+          <th class="py-3 px-4 text-left">Phone</th>
+          <th class="py-3 px-4 text-left">Notes</th>
+          <th class="py-3 px-4">Actions</th>
+        </tr>
+      </thead>
+      <tbody id="contactsTableBody"></tbody>
+    </table>
+  </section>
+
+  <script>
+    const form = document.getElementById('contactForm');
+    const contactsTableBody = document.getElementById('contactsTableBody');
+    const clearBtn = document.getElementById('clearBtn');
+
+    function getContacts() {
+      return JSON.parse(localStorage.getItem('contacts') || '[]');
+    }
+
+    function saveContacts(contacts) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
+
+    function renderContacts() {
+      const contacts = getContacts();
+      contactsTableBody.innerHTML = '';
+
+      if (contacts.length === 0) {
+        contactsTableBody.innerHTML = '<tr><td colspan="5" class="text-center p-4 text-gray-500">No contacts added yet.</td></tr>';
+        return;
+      }
+
+      contacts.forEach((contact, index) => {
+        const tr = document.createElement('tr');
+        tr.className = index % 2 === 0 ? 'bg-gray-50' : '';
+
+        tr.innerHTML = `
+          <td class="border px-4 py-2">${contact.name}</td>
+          <td class="border px-4 py-2">${contact.email}</td>
+          <td class="border px-4 py-2">${contact.phone || ''}</td>
+          <td class="border px-4 py-2">${contact.notes || ''}</td>
+          <td class="border px-4 py-2 text-center">
+            <button class="editBtn text-blue-600 hover:underline mr-2" data-index="${index}">Edit</button>
+            <button class="deleteBtn text-red-600 hover:underline" data-index="${index}">Delete</button>
+          </td>
+        `;
+        contactsTableBody.appendChild(tr);
+      });
+
+      // Attach event listeners to edit/delete buttons
+      document.querySelectorAll('.editBtn').forEach(btn =>
+        btn.addEventListener('click', e => {
+          const idx = e.target.dataset.index;
+          const contact = getContacts()[idx];
+          document.getElementById('contactId').value = idx;
+          document.getElementById('name').value = contact.name;
+          document.getElementById('email').value = contact.email;
+          document.getElementById('phone').value = contact.phone || '';
+          document.getElementById('notes').value = contact.notes || '';
+        })
+      );
+
+      document.querySelectorAll('.deleteBtn').forEach(btn =>
+        btn.addEventListener('click', e => {
+          const idx = e.target.dataset.index;
+          const contacts = getContacts();
+          contacts.splice(idx, 1);
+          saveContacts(contacts);
+          renderContacts();
+        })
+      );
+    }
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      const id = document.getElementById('contactId').value;
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+
+      const contacts = getContacts();
+
+      if (id === '') {
+        // New contact
+        contacts.push({ name, email, phone, notes });
+      } else {
+        // Update contact
+        contacts[id] = { name, email, phone, notes };
+      }
+
+      saveContacts(contacts);
+      renderContacts();
+      form.reset();
+      document.getElementById('contactId').value = '';
+    });
+
+    clearBtn.addEventListener('click', () => {
+      if (confirm('Clear ALL contacts? This cannot be undone.')) {
+        localStorage.removeItem('contacts');
+        renderContacts();
+        form.reset();
+        document.getElementById('contactId').value = '';
+      }
+    });
+
+    // Initial render
+    renderContacts();
+  </script>
 </body>
 </html>
