@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="GeoClicks360 - Boosting your local business presence with 360° virtual tours and Google Business Profile optimization.">
   <title>GeoClicks360</title>
-  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="images/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
   <script src="https://unpkg.com/scrollreveal"></script>
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H7EC61LPR6"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,6 +16,120 @@
     gtag('js', new Date());
     gtag('config', 'G-H7EC61LPR6');
   </script>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #007BFF;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nav-links a.active {
+      border-bottom: 2px solid white;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 4rem 1rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      line-height: 1.8;
+    }
+
+    .map {
+      width: 100%;
+      max-width: 640px;
+      height: 450px;
+      margin: 1rem auto;
+      display: block;
+      border: 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .testimonials-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .testimonial {
+      max-width: 300px;
+      background: #f1f6fd;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-tab-container {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+
+    .cta-tab {
+      background: #25d366;
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 30px;
+      text-decoration: none;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      font-weight: bold;
+    }
+
+    .cta-tab.audit {
+      background: #007BFF;
+    }
+
+    @media (max-width: 768px) {
+      .map {
+        height: 300px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -47,25 +162,25 @@
       <div class="testimonials-container">
         <div class="testimonial">
           <p>“Excellent service, our store now looks perfect on Google Maps!”</p>
-          <p class="author">– Local Store Owner</p>
+          <p><strong>– Local Store Owner</strong></p>
         </div>
         <div class="testimonial">
           <p>“Got more walk-in customers after the 360° tour was added.”</p>
-          <p class="author">– Restaurant Manager</p>
+          <p><strong>– Restaurant Manager</strong></p>
         </div>
         <div class="testimonial">
           <p>“Quick setup, professional team, highly recommended.”</p>
-          <p class="author">– Café Partner</p>
+          <p><strong>– Café Partner</strong></p>
         </div>
       </div>
     </section>
 
     <section id="tours">
       <h2>🌍 Virtual Tours & Maps</h2>
-      <iframe src="https://www.google.com/maps/d/embed?mid=19hZF9_swcUy3FXgnd_wsg6WfdN4keLE&ehbc=2E312F" class="map" allowfullscreen loading="lazy"></iframe>
-      <iframe src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F" class="map" allowfullscreen loading="lazy"></iframe>
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1751126866328!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3cGlKYmc.!2m2!1d13.14607855989636!2d77.56991140909241!3f100!4f0!5f0.4000000000000002" class="map" allowfullscreen loading="lazy"></iframe>
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06970479489355!4f10.919448374596612!5f0.4000000000000002" class="map" allowfullscreen loading="lazy"></iframe>
+      <iframe class="map" src="https://www.google.com/maps/d/embed?mid=19hZF9_swcUy3FXgnd_wsg6WfdN4keLE&ehbc=2E312F" loading="lazy" allowfullscreen></iframe>
+      <iframe class="map" src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F" loading="lazy" allowfullscreen></iframe>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!4v1751126866328!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3cGlKYmc.!2m2!1d13.14607855989636!2d77.56991140909241!3f100!4f0!5f0.4000000000000002" loading="lazy" allowfullscreen></iframe>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06970479489355!4f10.919448374596612!5f0.4000000000000002" loading="lazy" allowfullscreen></iframe>
     </section>
 
     <section id="contact">
@@ -89,18 +204,40 @@
     </section>
   </main>
 
+  <!-- Fixed WhatsApp CTA Tabs -->
   <div class="cta-tab-container">
     <a href="https://wa.me/917795524316" class="cta-tab whatsapp" target="_blank">💬 WhatsApp</a>
     <a href="https://wa.me/917795524316?text=Hi%2C%20I%20would%20like%20a%20free%20Google%20Business%20Profile%20audit." class="cta-tab audit" target="_blank">🛠️ Quick Audit</a>
   </div>
 
   <script>
+    // Scroll reveal animation
     ScrollReveal().reveal('section', {
       delay: 200,
       distance: '50px',
       duration: 1000,
       origin: 'bottom',
       reset: false
+    });
+
+    // Scrollspy: highlight nav link
+    const sections = document.querySelectorAll("section[id]");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute("id");
+        }
+      });
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
     });
   </script>
 </body>
