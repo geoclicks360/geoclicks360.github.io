@@ -1,145 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GeoClicks360 - Digital Presence Experts</title>
-<style>
-body{margin:0;font-family:'Poppins',sans-serif;background:#f7f9fc;color:#333;line-height:1.6;}
-header{background:#fff;padding:10px 20px;box-shadow:0 2px 4px rgba(0,0,0,0.1);position:fixed;width:100%;top:0;z-index:999;display:flex;justify-content:space-between;align-items:center;}
-header h1{font-size:1.2em;margin:0;color:#007bff;}
-nav a{margin:0 10px;text-decoration:none;color:#333;font-weight:500;}
-.hero{padding:100px 20px;text-align:center;background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg') center/cover no-repeat;color:#fff;}
-.hero h2{font-size:2.5em;margin-bottom:10px;}
-.hero p{font-size:1.2em;}
-.btn{background:#007bff;color:#fff;padding:10px 20px;margin:10px;display:inline-block;text-decoration:none;border-radius:4px;cursor:pointer;}
-.section{padding:60px 20px;max-width:1200px;margin:auto;}
-.section h3{text-align:center;font-size:2em;margin-bottom:20px;}
-.services-grid,.portfolio-grid,.testimonial-grid{display:grid;gap:20px;}
-.services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));}
-.services-item{text-align:center;background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-.services-item svg{width:50px;height:50px;margin-bottom:10px;fill:#007bff;}
-.portfolio-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));margin-bottom:30px;}
-.portfolio-item img{width:100%;border-radius:8px;}
-.testimonial-grid{grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
-.testimonial-item{background:#fff;padding:20px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
-form input,form textarea{width:100%;padding:10px;margin:8px 0;border:1px solid #ccc;border-radius:4px;}
-form button{background:#007bff;color:#fff;padding:12px;border:none;border-radius:4px;width:100%;font-size:1em;cursor:pointer;}
-footer{background:#222;color:#fff;text-align:center;padding:20px;}
-footer a{color:#fff;text-decoration:none;}
-.sticky-btn{display:none;}
-@media(max-width:768px){
-    .sticky-btn{display:block;position:fixed;bottom:15px;right:15px;background:#007bff;color:#fff;padding:12px 20px;border-radius:50px;text-decoration:none;font-weight:bold;box-shadow:0 4px 8px rgba(0,0,0,0.2);}
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GeoClicks360</title>
 </head>
-<body>
+<body style="margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#f7f9fc; color:#185a9d;">
 
-<header>
-<h1>GeoClicks360</h1>
-<nav>
-<a href="#services">Services</a>
-<a href="#portfolio">Portfolio</a>
-<a href="#about">About</a>
-<a href="#contact">Contact</a>
-</nav>
+  <header style="background:#185a9d; color:#fff; padding:0.6em 0 0.4em 0; text-align:center;">
+  <div style="font-weight:bold; font-size:1.1em; letter-spacing:1px;">GeoClicks360</div>
+  <nav style="margin-top:0.2em;">
+    <a href="#services" style="color:#fff; text-decoration:none; font-weight:500; font-size:0.95em; margin:0 0.7em;">Services</a>
+    <a href="#testimonials" style="color:#fff; text-decoration:none; font-weight:500; font-size:0.95em; margin:0 0.7em;">Testimonials</a>
+    <a href="#tours" style="color:#fff; text-decoration:none; font-weight:500; font-size:0.95em; margin:0 0.7em;">Virtual Tours</a>
+  </nav>
 </header>
 
-<section class="hero">
-<h2>Empowering Businesses with Google Maps & Digital Presence</h2>
-<p>1500+ Virtual Tours • 50+ Cities • ROI-Focused Strategy</p>
-<a href="#contact" class="btn">Free Audit</a>
-<a href="#portfolio" class="btn" style="background:#fff;color:#007bff;">See Our Work</a>
+  <section style="text-align:center; background:#fff; padding:1.2em 1em 1em 1em; border-radius:0 0 16px 16px; box-shadow:0 2px 8px #185a9d22;">
+  <h1 style="font-size:1.15em; font-weight:bold; margin-bottom:0.4em; letter-spacing:0.5px;">
+    🎯 More Clicks ✅ More Visits 🚶‍♂️ More Sales 💰 — Powered by GeoClicks360 🌐📸
+  </h1>
+  <p style="font-size:1em; margin-bottom:0.8em; color:#185a9d;">
+    📍 Boost your 📈 Google Business Profile & 🌀 360° Virtual Tours for 🌟 local growth!
+  </p>
+  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:0.7em;">
+    <a href="https://wa.me/917795524316" target="_blank" style="background:#25D366; color:#fff; padding:0.7em 1.5em; border-radius:30px; font-weight:bold; font-size:0.95em; text-decoration:none; box-shadow:0 2px 8px #185a9d22;">WhatsApp Free Audit</a>
+    <a href="tel:+917795524316" style="background:#185a9d; color:#fff; padding:0.7em 1.5em; border-radius:30px; font-weight:bold; font-size:0.95em; text-decoration:none; box-shadow:0 2px 8px #185a9d22;">Call Now</a>
+  </div>
 </section>
 
-<section id="services" class="section">
-<h3>Our Services</h3>
-<div class="services-grid">
-<!-- Google Maps -->
-<div class="services-item">
-<svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7m0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5Z"/></svg>
-<h4>Google Business Profile Optimization</h4>
-</div>
-<!-- 360 -->
-<div class="services-item">
-<svg viewBox="0 0 24 24"><path d="M12 2c-4.4 0-8 3.6-8 8 0 5 8 12 8 12s8-7 8-12c0-4.4-3.6-8-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
-<h4>360° Virtual Tours</h4>
-</div>
-<!-- SEO -->
-<div class="services-item">
-<svg viewBox="0 0 24 24"><path d="M11.2 8.6 9.8 7.2c-1.2 1-2.5 1.8-3.9 2.4 0 .5 0 1 0 1.4 1.4-.4 2.8-1.1 4.1-2.4zm6.6 2.6c-1.4.4-2.8 1.1-4.1 2.4l1.4 1.4c1.2-1 2.5-1.8 3.9-2.4 0-.5 0-1 0-1.4zM12 5c-3.9 0-7 3.1-7 7 0 3.9 3.1 7 7 7s7-3.1 7-7c0-3.9-3.1-7-7-7z"/></svg>
-<h4>Local SEO & Map Ranking</h4>
-</div>
-<!-- Web Dev -->
-<div class="services-item">
-<svg viewBox="0 0 24 24"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"/></svg>
-<h4>Landing Pages & Websites</h4>
-</div>
-<!-- Ads -->
-<div class="services-item">
-<svg viewBox="0 0 24 24"><path d="M11 2v20c5-1 9-6 9-10s-4-9-9-10zM4 12c0-4 3-9 7-10v20c-4-1-7-6-7-10z"/></svg>
-<h4>Digital Ads & Lead Generation</h4>
-</div>
-<!-- Reviews -->
-<div class="services-item">
-<svg viewBox="0 0 24 24"><path d="M12 17.3 18.18 21 16.54 13.97 22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-<h4>Reputation & Review Management</h4>
-</div>
-</div>
+  <!-- Intro Section -->
+  <section style="background:#eaf0fa; text-align:center; padding:1em 1em 1em 1em; border-radius:12px; margin:1.2em auto; max-width:700px; box-shadow:0 2px 8px #185a9d22;">
+  <h2 style="font-size:1.1em; margin-bottom:0.3em;">🚀 GeoClicks360 | Boost Your Local Visibility</h2>
+  <p style="font-size:1em; margin-bottom:0.7em;">
+    I help businesses get noticed on Google Maps &amp; Search with:
+  </p>
+  <ul style="list-style:none; padding:0; margin:0 auto 0.7em auto; max-width:500px; font-size:0.98em; text-align:left;">
+    <li style="margin-bottom:0.4em;">🔍 <strong>GMB Audit &amp; Optimization</strong></li>
+    <li style="margin-bottom:0.4em;">📸 <strong>360° Virtual Tour &amp; Photoshoot</strong></li>
+    <li style="margin-bottom:0.4em;">🧑‍💼 <strong>Profile Management &amp; Growth</strong></li>
+  </ul>
+  <p style="font-size:1em; font-weight:bold;">📈 Let's grow your local presence, 360° around!</p>
 </section>
 
-<section id="portfolio" class="section">
-<h3>Portfolio Highlights</h3>
-<div class="portfolio-grid">
-<div class="portfolio-item"><img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Project"></div>
-<div class="portfolio-item"><img src="https://images.pexels.com/photos/3184170/pexels-photo-3184170.jpeg" alt="Project"></div>
-<div class="portfolio-item"><img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg" alt="Project"></div>
-</div>
+<!-- About Section -->
+<section id="about" style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
+  <h2 style="color: #003366; font-size: 28px; margin-bottom: 15px;">About GeoClicks360</h2>
+  <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: #444;">
+    GeoClicks360 is a visual marketing brand specializing in <strong>360° Virtual Tours</strong> and <strong>Google Business Profile (GBP) optimization</strong> for local businesses.
+    <br><br>
+    Through professional agency collaborations, GeoClicks360 has contributed to the successful delivery of <strong>2000+ projects</strong> across <strong>100+ cities and 7+ states</strong>, helping brands enhance their digital presence on Google Maps and Search.
+    <br><br>
+    Alongside this, GeoClicks360 has independently executed <strong>20+ freelance projects</strong> — empowering business owners with immersive visuals and local SEO enhancements to boost visibility, trust, and engagement.
+  </p>
 </section>
 
-<section id="about" class="section">
-<h3>About GeoClicks360</h3>
-<p style="text-align:center;max-width:800px;margin:auto;">
-With over 15 years of experience in Google Maps, Digital Marketing, and 360° Virtual Tours, GeoClicks360 has transformed the online presence of businesses across 50+ cities and 7+ states. 
-We are Google Street View Trusted Photographers delivering international quality services that drive local engagement and ROI.
-</p>
+  <!-- Projects Section -->
+<section id="projects" style="background-color: #ffffff; padding: 60px 20px;">
+  <h2 style="text-align: center; font-size: 28px; color: #003366; margin-bottom: 40px;">Project Highlights</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1100px; margin: auto;">
+
+    <!-- Project Card 1 -->
+    <div style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 12px; padding: 20px; background: #f9f9f9;">
+      <h3 style="color: #003366; margin-bottom: 10px;">Hostel 360 Tour</h3>
+      <p style="margin: 5px 0;"><strong>Client:</strong> Sai Anna Poorneswari Ladies PG</p>
+      <p style="margin: 5px 0;">📌 GMB Page Creation + 360° Virtual Photoshoot + Optimization (Review, Offer, Updates)</p>
+      <a href="https://maps.app.goo.gl/etPNbU85x9uCw5cw9" target="_blank" style="color: #0056cc; text-decoration: underline;">View on Google Maps</a>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 12px; padding: 20px; background: #f9f9f9;">
+      <h3 style="color: #003366; margin-bottom: 10px;">Photography Studio 360 Tour</h3>
+      <p style="margin: 5px 0;"><strong>Client:</strong> Kodak Click Photo Express</p>
+      <p style="margin: 5px 0;">📌 GMB Page Creation + 360° Virtual Photoshoot + Optimization (Review, Offer, Updates)</p>
+      <a href="https://maps.app.goo.gl/qBuJfHk9gFMiBrxW9" target="_blank" style="color: #0056cc; text-decoration: underline;">View on Google Maps</a>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 12px; padding: 20px; background: #f9f9f9;">
+      <h3 style="color: #003366; margin-bottom: 10px;">Mattress & Furniture Showroom</h3>
+      <p style="margin: 5px 0;"><strong>Client:</strong> Wakefit Yelahanka Exclusive Dealer</p>
+      <p style="margin: 5px 0;">📌 360° Virtual Photoshoot + GMB Optimization + Razorpay Setup</p>
+      <a href="https://maps.app.goo.gl/J789Z3BbKLUAbsHt9" target="_blank" style="color: #0056cc; text-decoration: underline;">View on Google Maps</a>
+    </div>
+
+  </div>
 </section>
 
-<section class="section">
-<h3>What Our Clients Say</h3>
-<div class="testimonial-grid">
-<div class="testimonial-item">
-<p>"GeoClicks360 helped us rank #1 on Google Maps and the 360° tour doubled our footfall!"</p>
-<strong>- Cafe Owner, Bangalore</strong>
-</div>
-<div class="testimonial-item">
-<p>"Professional, fast, and results-driven. Highly recommended for GMB optimization."</p>
-<strong>- Retail Chain, Chennai</strong>
-</div>
-</div>
+  <!-- Services Section -->
+  <section id="services" style="background:#f7f9fc; padding:1.2em 1em; margin:1em auto; max-width:800px; border-radius:14px; box-shadow:0 2px 8px #185a9d22;">
+  <h2 style="font-size:1.07em; margin-bottom:0.4em; text-align:center;">🔧 Services We Offer</h2>
+  <ul style="max-width:600px; margin:0.7em auto; text-align:left; font-size:1em; color:#333; padding:0;">
+    <li style="margin-bottom:0.5em;">📸 360° Virtual Photoshoot <span style="color:#185a9d;">(Google Street View Trusted)</span></li>
+    <li style="margin-bottom:0.5em;">🏢 Google Business Profile Setup &amp; Verification</li>
+    <li style="margin-bottom:0.5em;">⚡️ Profile Optimization &amp; <span style="color:#185a9d;">Map Ranking Boost</span></li>
+    <li style="margin-bottom:0.5em;">⭐️ Review Boosting Strategy &amp; Training</li>
+    <li style="margin-bottom:0.5em;">💬 WhatsApp + Website Integration</li>
+    <li style="margin-bottom:0.5em;">📅 Monthly Offers &amp; Content Posting</li>
+    <li style="margin-bottom:0.5em;">🛠️ Local SEO Consulting &amp; Support</li>
+    <li style="margin-bottom:0.5em;">🎯 Targeted Growth Strategies</li>
+  </ul>
 </section>
 
-<section id="contact" class="section">
-<h3>Get in Touch</h3>
-<form action="mailto:geoclicks360@gmail.com" method="post" enctype="text/plain">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<input type="tel" name="phone" placeholder="Phone Number">
-<textarea name="message" rows="5" placeholder="How can we help?" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-
-<p style="text-align:center;margin-top:20px;">
-Or chat with us directly on <a href="https://wa.me/916361096360" target="_blank">WhatsApp</a>
-</p>
+  <!-- Testimonials Section -->
+  <section id="testimonials" style="background:#185a9d; color:#fff; padding:1.1em 1em; border-radius:14px; margin:1em auto; max-width:900px; box-shadow:0 2px 8px #185a9d22;">
+  <h2 style="font-size:1.07em; margin-bottom:0.4em; text-align:center;">⭐ What Clients Say</h2>
+  <div style="display:flex; flex-wrap:wrap; gap:0.7em; justify-content:center;">
+    <div style="background:#fff; color:#185a9d; padding:1em; border-radius:7px; box-shadow:0 2px 8px #185a9d22; max-width:250px; min-width:170px; margin-bottom:0.7em;">
+      <p style="margin:0.3em 0;">🛍️ “Excellent service, our store now looks perfect on Google Maps!”</p>
+      <p style="font-style:italic; margin:0.3em 0;">– Local Store Owner</p>
+    </div>
+    <div style="background:#fff; color:#185a9d; padding:1em; border-radius:7px; box-shadow:0 2px 8px #185a9d22; max-width:250px; min-width:170px; margin-bottom:0.7em;">
+      <p style="margin:0.3em 0;">🍽️ “Got more walk-in customers after the 360° tour was added.”</p>
+      <p style="font-style:italic; margin:0.3em 0;">– Restaurant Manager</p>
+    </div>
+    <div style="background:#fff; color:#185a9d; padding:1em; border-radius:7px; box-shadow:0 2px 8px #185a9d22; max-width:250px; min-width:170px; margin-bottom:0.7em;">
+      <p style="margin:0.3em 0;">☕️ “Quick setup, professional team, highly recommended.”</p>
+      <p style="font-style:italic; margin:0.3em 0;">– Café Partner</p>
+    </div>
+    <div style="background:#fff; color:#185a9d; padding:1em; border-radius:7px; box-shadow:0 2px 8px #185a9d22; max-width:250px; min-width:170px; margin-bottom:0.7em;">
+      <p style="margin:0.3em 0;">🏥 “Our clinic’s online bookings increased thanks to their GMB work!”</p>
+      <p style="font-style:italic; margin:0.3em 0;">– Clinic Owner</p>
+    </div>
+  </div>
 </section>
 
-<footer>
-<p>© 2025 GeoClicks360 | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-<p>Email: geoclicks360@gmail.com | Phone/WhatsApp: +91 63610 96360</p>
-</footer>
+  <!-- Virtual Tours Section -->
+  <section id="tours" style="padding:2em 1em; background:#fff; border-radius:16px; margin:2em auto; max-width:900px; box-shadow:0 4px 16px #185a9d22;">
+    <h2 style="font-size:1.2em; margin-bottom:0.7em; text-align:center;">🌍 Virtual Tours & Maps</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center;">
+      <iframe src="https://www.google.com/maps/d/embed?mid=19hZF9_swcUy3FXgnd_wsg6WfdN4keLE&ehbc=2E312F" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1751126866328!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3cGlKYmc.!2m2!1d13.14607855989636!2d77.56991140909241!3f100!4f0!5f0.4000000000000002" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06970479489355!4f10.919448374596612!5f0.4000000000000002" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
+    </div>
+  </section>
 
-<a href="#contact" class="sticky-btn">Get Quote</a>
+  <!-- Quick Links Section -->
+  <section style="padding:2em 1em; background:#eaf0fa; border-radius:16px; margin:2em auto; max-width:700px; box-shadow:0 4px 16px #185a9d22;">
+    <h2 style="font-size:1.2em; text-align:center;">🔗 Quick Links</h2>
+    <ul style="max-width:600px; margin:1em auto; text-align:left; font-size:1em; padding:0;">
+      <li style="margin-bottom:0.7em;"><a href="https://pages.razorpay.com/stores/st_QjTdp5R6BxMsx6" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">💳 Pay Online</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://wa.me/917795524316" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">📞 WhatsApp Us</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://github.com/geoclicks360" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">🌐 Github</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://www.linkedin.com/company/geoclicks360" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">🔗 LinkedIn</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://linktr.ee/geoclicks360" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">🌲 Linktree</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://www.instagram.com/geoclicks360/" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">📸 Instagram</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://www.facebook.com/profile.php?id=61577975815327" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">📘 Facebook</a></li>
+      <li style="margin-bottom:0.7em;"><a href="https://x.com/GeoClicks360" target="_blank" style="color:#185a9d; font-weight:bold; text-decoration:none;">🐦 X (Twitter)</a></li>
+    </ul>
+  </section>
 
+  <footer style="background:#185a9d; color:#fff; text-align:center; padding:1em 0; font-size:1em; border-radius:24px 24px 0 0; margin-top:2em;">
+    <p style="margin:0;">&copy; 2025 GeoClicks360. All rights reserved.</p>
+    <a href="policies.html" style="color: #fff; text-decoration: underline;">Policies & Terms</a>
+  </footer>
+
+  <!-- Mobile responsiveness: stack elements on small screens -->
+  <script>
+    function stackFlexOnMobile() {
+      var width = window.innerWidth;
+      var flexSections = document.querySelectorAll('section > div[style*="display:flex"]');
+      for (var i=0; i<flexSections.length; i++) {
+        if(width < 700) {
+          flexSections[i].style.flexDirection = "column";
+          flexSections[i].style.alignItems = "center";
+        } else {
+          flexSections[i].style.flexDirection = "row";
+          flexSections[i].style.alignItems = "initial";
+        }
+      }
+    }
+    window.addEventListener('resize', stackFlexOnMobile);
+    window.addEventListener('DOMContentLoaded', stackFlexOnMobile);
+  </script>
 </body>
 </html>
