@@ -1,43 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>GeoClicks360</title>
   <style>
-    /* Pulse animation for Get Quote Button */
+    /* Pulse Animation for Sticky Button */
     @keyframes pulse {
       0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,127,80,0.7); }
-      70% { transform: scale(1.07); box-shadow: 0 0 0 15px rgba(255,127,80,0); }
+      70% { transform: scale(1.05); box-shadow: 0 0 0 12px rgba(255,127,80,0); }
       100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255,127,80,0); }
     }
 
-    /* Popup styles */
+    /* Overlay and Popup Box */
     #quote-overlay {
-      display:none; position:fixed; top:0; left:0; width:100%; height:100%;
-      background:rgba(0,0,0,0.6); z-index:1000; justify-content:center; align-items:center;
+      display:none; 
+      position:fixed; 
+      top:0; left:0; right:0; bottom:0; 
+      background:rgba(0,0,0,0.6); 
+      justify-content:center; 
+      align-items:center; 
+      z-index:1000;
     }
     #quote-box {
-      background:#fff; padding:1.5em; border-radius:12px; width:90%; max-width:400px;
-      box-shadow:0 6px 18px rgba(0,0,0,0.3); text-align:center; position:relative;
+      background:#fff; 
+      padding:20px; 
+      border-radius:12px; 
+      width:90%; 
+      max-width:400px; 
+      text-align:center; 
+      box-shadow:0 4px 20px rgba(0,0,0,0.3);
     }
-    #quote-box h2 { margin-bottom:1em; font-size:1.3em; color:#185a9d; }
     #quote-box input, #quote-box textarea {
-      width:100%; padding:0.7em; margin-bottom:0.8em; border:1px solid #ccc;
-      border-radius:8px; font-size:1em;
+      width:100%; 
+      padding:10px; 
+      margin:8px 0; 
+      border:1px solid #ccc; 
+      border-radius:6px;
     }
     #quote-box button {
-      background:#185a9d; color:#fff; font-weight:600; border:none; padding:0.8em 1.2em;
-      border-radius:50px; cursor:pointer; font-size:1em; width:100%;
+      background:#185a9d; 
+      color:#fff; 
+      border:none; 
+      padding:10px 20px; 
+      border-radius:6px; 
+      cursor:pointer; 
+      font-weight:bold;
     }
     #close-btn {
-      background:none; border:none; color:#999; font-size:1.3em; position:absolute;
-      right:20px; top:20px; cursor:pointer;
+      background:none; 
+      border:none; 
+      font-size:1.5em; 
+      position:absolute; 
+      top:20px; right:20px; 
+      cursor:pointer;
     }
   </style>
 </head>
 <body style="margin:0; font-family:'Segoe UI',Arial,sans-serif; background:#f7f9fc; color:#185a9d;">
 
+  <!-- Header -->
   <header style="background:#185a9d; color:#fff; padding:0.6em 0 0.4em 0; text-align:center;">
     <div style="font-weight:bold; font-size:1.1em; letter-spacing:1px;">GeoClicks360</div>
     <nav style="margin-top:0.2em;">
@@ -47,6 +69,7 @@
     </nav>
   </header>
 
+  <!-- Hero -->
   <section style="text-align:center; background:#fff; padding:1.2em 1em 1em 1em; border-radius:0 0 16px 16px; box-shadow:0 2px 8px #185a9d22;">
     <h1 style="font-size:1.15em; font-weight:bold; margin-bottom:0.4em; letter-spacing:0.5px;">
       🎯 More Clicks ✅ More Visits 🚶‍♂️ More Sales 💰 — Powered by GeoClicks360 🌐📸
@@ -60,12 +83,10 @@
     </div>
   </section>
 
-  <!-- Intro Section -->
+  <!-- Intro -->
   <section style="background:#eaf0fa; text-align:center; padding:1em 1em 1em 1em; border-radius:12px; margin:1.2em auto; max-width:700px; box-shadow:0 2px 8px #185a9d22;">
     <h2 style="font-size:1.1em; margin-bottom:0.3em;">🚀 GeoClicks360 | Boost Your Local Visibility</h2>
-    <p style="font-size:1em; margin-bottom:0.7em;">
-      I help businesses get noticed on Google Maps &amp; Search with:
-    </p>
+    <p style="font-size:1em; margin-bottom:0.7em;">I help businesses get noticed on Google Maps &amp; Search with:</p>
     <ul style="list-style:none; padding:0; margin:0 auto 0.7em auto; max-width:500px; font-size:0.98em; text-align:left;">
       <li style="margin-bottom:0.4em;">🔍 <strong>GMB Audit &amp; Optimization</strong></li>
       <li style="margin-bottom:0.4em;">📸 <strong>360° Virtual Tour &amp; Photoshoot</strong></li>
@@ -74,7 +95,7 @@
     <p style="font-size:1em; font-weight:bold;">📈 Let's grow your local presence, 360° around!</p>
   </section>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" style="background-color: #f9f9f9; padding: 40px 20px; text-align: center;">
     <h2 style="color: #003366; font-size: 28px; margin-bottom: 15px;">About GeoClicks360</h2>
     <p style="max-width: 800px; margin: 0 auto; font-size: 16px; line-height: 1.8; color: #444;">
@@ -86,26 +107,22 @@
     </p>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects" style="background-color: #ffffff; padding: 60px 20px;">
     <h2 style="text-align: center; font-size: 28px; color: #003366; margin-bottom: 40px;">Project Highlights</h2>
-
     <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; max-width: 1100px; margin: auto;">
-
       <div style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 12px; padding: 20px; background: #f9f9f9;">
         <h3 style="color: #003366; margin-bottom: 10px;">Hostel 360 Tour</h3>
         <p style="margin: 5px 0;"><strong>Client:</strong> Sai Anna Poorneswari Ladies PG</p>
         <p style="margin: 5px 0;">📌 GMB Page Creation + 360° Virtual Photoshoot + Optimization (Review, Offer, Updates)</p>
         <a href="https://maps.app.goo.gl/etPNbU85x9uCw5cw9" target="_blank" style="color: #0056cc; text-decoration: underline;">View on Google Maps</a>
       </div>
-
       <div style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 12px; padding: 20px; background: #f9f9f9;">
         <h3 style="color: #003366; margin-bottom: 10px;">Photography Studio 360 Tour</h3>
         <p style="margin: 5px 0;"><strong>Client:</strong> Kodak Click Photo Express</p>
         <p style="margin: 5px 0;">📌 GMB Page Creation + 360° Virtual Photoshoot + Optimization (Review, Offer, Updates)</p>
         <a href="https://maps.app.goo.gl/qBuJfHk9gFMiBrxW9" target="_blank" style="color: #0056cc; text-decoration: underline;">View on Google Maps</a>
       </div>
-
       <div style="flex: 1 1 300px; border: 1px solid #ddd; border-radius: 12px; padding: 20px; background: #f9f9f9;">
         <h3 style="color: #003366; margin-bottom: 10px;">Mattress & Furniture Showroom</h3>
         <p style="margin: 5px 0;"><strong>Client:</strong> Wakefit Yelahanka Exclusive Dealer</p>
@@ -115,7 +132,7 @@
     </div>
   </section>
 
-  <!-- Services Section -->
+  <!-- Services -->
   <section id="services" style="background:#f7f9fc; padding:1.2em 1em; margin:1em auto; max-width:800px; border-radius:14px; box-shadow:0 2px 8px #185a9d22;">
     <h2 style="font-size:1.07em; margin-bottom:0.4em; text-align:center;">🔧 Services We Offer</h2>
     <ul style="max-width:600px; margin:0.7em auto; text-align:left; font-size:1em; color:#333; padding:0;">
@@ -130,7 +147,7 @@
     </ul>
   </section>
 
-  <!-- Testimonials Section -->
+  <!-- Testimonials -->
   <section id="testimonials" style="background:#185a9d; color:#fff; padding:1.1em 1em; border-radius:14px; margin:1em auto; max-width:900px; box-shadow:0 2px 8px #185a9d22;">
     <h2 style="font-size:1.07em; margin-bottom:0.4em; text-align:center;">⭐ What Clients Say</h2>
     <div style="display:flex; flex-wrap:wrap; gap:0.7em; justify-content:center;">
@@ -153,19 +170,19 @@
     </div>
   </section>
 
-  <!-- Virtual Tours Section -->
+  <!-- Virtual Tours -->
   <section id="tours" style="padding:2em 1em; background:#fff; border-radius:16px; margin:2em auto; max-width:900px; box-shadow:0 4px 16px #185a9d22;">
     <h2 style="font-size:1.2em; margin-bottom:0.7em; text-align:center;">🌍 Virtual Tours & Maps</h2>
     <div style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center;">
       <iframe src="https://www.google.com/maps/d/embed?mid=19hZF9_swcUy3FXgnd_wsg6WfdN4keLE&ehbc=2E312F" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
       <iframe src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
       <iframe src="https://www.google.com/maps/embed?pb=!4v1751126866328!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3cGlKYmc.!2m2!1d13.14607855989636!2d77.56991140909241!3f100!4f0!5f0.4000000000000002" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2px 12px #185a9d22; margin-bottom:1em;"></iframe>
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06970479489355!4f10.919448374596612!5f0.4000000000000002" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9
-        </iframe>
-    </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06970479489355!4f10.919448374596612!5f0.4000000000000002" loading="lazy" style="width:340px; height:210px; border:2px solid #185a9d; border-radius:8px; box-shadow:0 2
+
+</div>
   </section>
 
-  <!-- Quick Links Section -->
+  <!-- Quick Links -->
   <section style="padding:2em 1em; background:#eaf0fa; border-radius:16px; margin:2em auto; max-width:700px; box-shadow:0 4px 16px #185a9d22;">
     <h2 style="font-size:1.2em; text-align:center;">🔗 Quick Links</h2>
     <ul style="max-width:600px; margin:1em auto; text-align:left; font-size:1em; padding:0;">
@@ -187,55 +204,58 @@
   </footer>
 
   <!-- Sticky Get Quote Button -->
-  <button id="quote-btn" style="position:fixed; bottom:20px; right:20px; background:#FF7F50; color:#fff; border:none; padding:0.9em 1.4em; border-radius:50px; font-weight:bold; font-size:1em; cursor:pointer; z-index:999; animation:pulse 2s infinite;">
+  <button id="get-quote-btn" 
+    style="position:fixed; bottom:20px; right:20px; background:#ff7f50; color:#fff; padding:14px 22px; border:none; border-radius:30px; font-weight:bold; cursor:pointer; font-size:1em; z-index:999; animation:pulse 2s infinite;">
     📩 Get Quote
   </button>
 
-  <!-- Popup Form -->
+  <!-- Quote Popup -->
   <div id="quote-overlay">
     <div id="quote-box">
       <button id="close-btn">&times;</button>
-      <h2>Request a Quote</h2>
-      <input type="email" id="email" placeholder="Your Email" required>
-      <input type="tel" id="phone" placeholder="Phone Number" required>
-      <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
-      <button id="submit-quote">Submit</button>
+      <h3 style="margin-top:0;">Get a Quick Quote</h3>
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <input type="tel" id="phone" placeholder="Phone Number" required />
+      <textarea id="message" rows="4" placeholder="Your Message"></textarea>
+      <button id="send-btn">Send</button>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script>
-    // Sticky Quote Button Logic
-    const quoteBtn = document.getElementById("quote-btn");
-    const overlay = document.getElementById("quote-overlay");
-    const closeBtn = document.getElementById("close-btn");
-    const submitBtn = document.getElementById("submit-quote");
+    const btn = document.getElementById('get-quote-btn');
+    const overlay = document.getElementById('quote-overlay');
+    const closeBtn = document.getElementById('close-btn');
+    const sendBtn = document.getElementById('send-btn');
 
-    quoteBtn.addEventListener("click", () => overlay.style.display = "flex");
-    closeBtn.addEventListener("click", () => overlay.style.display = "none");
+    btn.addEventListener('click', () => overlay.style.display = 'flex');
+    closeBtn.addEventListener('click', () => overlay.style.display = 'none');
 
-    submitBtn.addEventListener("click", () => {
-      const email = document.getElementById("email").value;
-      const phone = document.getElementById("phone").value;
-      const message = document.getElementById("message").value;
+    sendBtn.addEventListener('click', () => {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const message = document.getElementById('message').value.trim();
 
-      if(!email || !phone || !message){
-        alert("Please fill all fields!");
+      if(!name || !email || !phone || !message) {
+        alert('Please fill all fields.');
         return;
       }
 
-      // Send Email via mailto
-      const subject = encodeURIComponent("New Quote Request");
-      const body = encodeURIComponent(`Email: ${email}\nPhone: ${phone}\nMessage: ${message}`);
-      window.open(`mailto:geoclicks360@gmail.com?subject=${subject}&body=${body}`, "_blank");
+      // EmailJS or backend integration (Optional)
+      // For now, open WhatsApp with filled message
+      const whatsappMsg = `Hello, my name is ${name}.%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+      window.open(`https://wa.me/917795524316?text=${whatsappMsg}`, '_blank');
 
-      // Send WhatsApp Message
-      const whatsappMsg = encodeURIComponent(`New Quote Request:\nEmail: ${email}\nPhone: ${phone}\nMessage: ${message}`);
-      window.open(`https://wa.me/917795524316?text=${whatsappMsg}`, "_blank");
-
-      overlay.style.display = "none";
+      // You can also trigger an email sending via backend
+      alert('Your quote request has been sent via WhatsApp!');
+      overlay.style.display = 'none';
     });
+  </script>
 
-    // Mobile responsiveness for flex sections
+  <!-- Mobile responsiveness -->
+  <script>
     function stackFlexOnMobile() {
       var width = window.innerWidth;
       var flexSections = document.querySelectorAll('section > div[style*="display:flex"]');
@@ -252,5 +272,6 @@
     window.addEventListener('resize', stackFlexOnMobile);
     window.addEventListener('DOMContentLoaded', stackFlexOnMobile);
   </script>
+
 </body>
-      </html>
+</html>
