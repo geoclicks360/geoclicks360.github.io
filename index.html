@@ -1,11 +1,13 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoClicks360 | Digital Growth Agency</title>
   <meta name="description" content="GeoClicks360 helps businesses grow locally through Google Business Profile Optimization, 360° Virtual Tours, Local SEO, and Reputation Management." />
+  <link rel="icon" href="https://geoclicks360.github.io/favicon.png" type="image/png" />
   <style>
-    html {scroll-behavior: smooth;} 
+    html {scroll-behavior: smooth;}
     body {margin:0; font-family:'Poppins', Arial, sans-serif; background:#f8fafc; color:#1b1b1b; line-height:1.6;}
     header, footer, section {max-width:1200px; margin:0 auto;}
     header {background:#0a2540; color:#fff; padding:1em; text-align:center; position:sticky; top:0; z-index:1000;}
@@ -13,50 +15,56 @@
     header nav {display:flex; flex-wrap:wrap; justify-content:center; gap:1em; margin-top:0.5em;}
     header nav a {color:#fff; font-weight:500; text-decoration:none; display:inline-flex; align-items:center; gap:6px; transition:color 0.3s ease;}
     header nav a:hover {color:#25D366;}
-    .menu-toggle {display:none; background:none; border:none; color:#fff; font-size:1.5em;}.hero {background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover no-repeat; text-align:center; padding:4em 1em; color:#fff; position:relative;}
-.hero div {background:rgba(0,0,0,0.6); padding:3em 1em; border-radius:12px;}
-.hero a {display:inline-flex; align-items:center; gap:8px; border-radius:30px; padding:0.8em 1.8em; font-weight:600; text-decoration:none; font-size:1em; transition:all 0.3s ease;}
-.btn-wa {background:#25D366; color:#fff;}
-.btn-wa:hover {background:#1da851;}
-.btn-call {background:#fff; color:#0a2540;}
-.btn-call:hover {background:#e6e6e6;}
+    .menu-toggle {display:none; background:none; border:none; color:#fff; font-size:1.5em;}
 
-section {padding:3em 1em; background:#fff; text-align:center; margin-bottom:2em; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.05);}
-#whyus, #testimonials {background:#f0f4f9;}
+    .hero {background:url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover no-repeat; text-align:center; padding:4em 1em; color:#fff; position:relative;}
+    .hero div {background:rgba(0,0,0,0.6); padding:3em 1em; border-radius:12px;}
+    .hero a {display:inline-flex; align-items:center; gap:8px; border-radius:30px; padding:0.8em 1.8em; font-weight:600; text-decoration:none; font-size:1em; transition:all 0.3s ease;}
+    .btn-wa {background:#25D366; color:#fff;}
+    .btn-wa:hover {background:#1da851;}
+    .btn-call {background:#fff; color:#0a2540;}
+    .btn-call:hover {background:#e6e6e6;}
 
-#quicklinks ul {list-style:none; padding:0; margin:0 auto; text-align:center;}
-#quicklinks li {margin-bottom:1em; display:flex; align-items:center; justify-content:center; gap:8px;}
-#quicklinks a {color:#0a2540; text-decoration:none; font-weight:600; transition:color 0.3s ease; display:flex; align-items:center; gap:8px;}
-#quicklinks a:hover {color:#185a9d;}
+    section {padding:3em 1em; background:#fff; text-align:center; margin-bottom:2em; border-radius:12px; box-shadow:0 3px 10px rgba(0,0,0,0.05);}
+    section h2 {margin-bottom:1em;}
+    section div:hover {transition:transform 0.3s ease, box-shadow 0.3s ease;}
+    #whyus div:hover, #services div:hover, #testimonials div:hover {transform:translateY(-4px); box-shadow:0 4px 15px rgba(0,0,0,0.1);}
+    #whyus, #testimonials {background:#f0f4f9;}
 
-#tours iframe {
-  width:100%;
-  max-width:340px;
-  height:210px;
-  border:2px solid #185a9d;
-  border-radius:8px;
-  box-shadow:0 2px 12px #185a9d22;
-  margin-bottom:1em;
-}
+    #quicklinks ul {list-style:none; padding:0; margin:0 auto; text-align:center;}
+    #quicklinks li {margin-bottom:1em; display:flex; align-items:center; justify-content:flex-start; gap:10px; padding:0.5em 1em; background:#f8fafc; border-radius:8px; max-width:300px; margin:0.5em auto;}
+    #quicklinks a {color:#0a2540; text-decoration:none; font-weight:600; display:flex; align-items:center; gap:10px; width:100%; justify-content:center;}
+    #quicklinks a:hover {color:#185a9d; transform:translateX(4px);}
 
-/* Contact Us */
-#contact form {display:flex; flex-direction:column; gap:1em; max-width:500px; margin:1em auto;}
-#contact input, #contact textarea {padding:0.8em; border:1px solid #ccc; border-radius:8px; font-size:1em;}
-#contact button {background:#185a9d; color:#fff; padding:0.8em; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:background 0.3s ease;}
-#contact button:hover {background:#0a2540;}
-#contact .map {margin-top:2em;}
-#form-status {margin-top:1em; font-weight:600;}
+    #tours iframe {
+      width:100%;
+      max-width:340px;
+      aspect-ratio:16/9;
+      border:2px solid #185a9d;
+      border-radius:8px;
+      box-shadow:0 2px 12px #185a9d22;
+      margin-bottom:1em;
+    }
 
-footer {background:#185a9d; color:#fff; text-align:center; padding:1em 0; font-size:1em; border-radius:24px 24px 0 0; margin-top:2em;}
-footer a {color:#fff; text-decoration:none;}
+    #contact form {display:flex; flex-direction:column; gap:1em; max-width:500px; margin:1em auto;}
+    #contact input, #contact textarea {padding:0.8em; border:1px solid #ccc; border-radius:8px; font-size:1em;}
+    #contact button {background:#185a9d; color:#fff; padding:0.8em; border:none; border-radius:8px; cursor:pointer; font-weight:600; transition:background 0.3s ease;}
+    #contact button:hover {background:#0a2540;}
+    #form-status {margin-top:1em; font-weight:600;}
+    #form-status.success {color:green;} 
+    #form-status.error {color:red;}
+    #contact .map {margin-top:2em;}
 
-@media (max-width:768px){
-  header nav {display:none; flex-direction:column; background:#0a2540; padding:1em; margin-top:0;}
-  header nav.active {display:flex;}
-  .menu-toggle {display:block;}
-  section {padding:2em 0.8em;}
-}
+    footer {background:#185a9d; color:#fff; text-align:center; padding:1em 0; font-size:1em; border-radius:24px 24px 0 0; margin-top:2em;}
+    footer a {color:#fff; text-decoration:none;}
 
+    @media (max-width:768px){
+      header nav {display:none; flex-direction:column; background:#0a2540; padding:1em; margin-top:0;}
+      header nav.active {display:flex;}
+      .menu-toggle {display:block;}
+      section {padding:2em 0.8em;}
+      .hero {padding:2.5em 1em;}
+    }
   </style>
 </head>
 <body>
@@ -68,30 +76,52 @@ footer a {color:#fff; text-decoration:none;}
     <nav>
       <a href="#services">Services</a>
       <a href="#about">About</a>
+      <a href="#metrics">Metrics</a>
       <a href="#whyus">Why Us</a>
       <a href="#testimonials">Testimonials</a>
       <a href="#quicklinks">Quick Links</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>  <section class="hero" aria-label="Hero section with main message">
+  </header>
+
+  <section class="hero">
     <div>
       <h1>Driving Local Growth with Digital Precision</h1>
       <p style="max-width:600px; margin:0 auto 1.5em auto;">We empower businesses with optimized Google Business Profiles, immersive 360° Virtual Tours, and strategies designed to attract customers & build trust.</p>
-      <a class="btn-wa" href="https://wa.me/917795524316" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">WhatsApp</a>
-      <a class="btn-call" href="tel:+917795524316" aria-label="Call us now">Call Now</a>
+      <a class="btn-wa" href="https://wa.me/917795524316" target="_blank">WhatsApp</a>
+      <a class="btn-call" href="tel:+917795524316">Call Now</a>
       <a class="btn-call" href="#contact">Request a Quote</a>
     </div>
-  </section>  <section id="about">
+  </section>
+
+  <!-- Metrics Section -->
+  <section id="metrics" style="background:#f0f4f9; padding:3em 1em; text-align:center; border-radius:12px; margin:2em auto;">
+    <h2>Our Proven Track Record</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:2em; justify-content:center;">
+      <div><h3 style="font-size:2em; color:#185a9d;" class="counter" data-target="2000">0</h3><p>Corporate Agency 360° Projects</p></div>
+      <div><h3 style="font-size:2em; color:#185a9d;" class="counter" data-target="100">0</h3><p>Cities Covered</p></div>
+      <div><h3 style="font-size:2em; color:#185a9d;" class="counter" data-target="7">0</h3><p>States Traveled</p></div>
+      <div><h3 style="font-size:2em; color:#185a9d;" class="counter" data-target="20">0</h3><p>Freelance Projects</p></div>
+    </div>
+  </section>
+
+  <section id="about">
     <h2>About GeoClicks360</h2>
     <p>We specialize in <strong>Google Business Profile Optimization</strong> and <strong>360° Virtual Tours</strong> to help businesses build trust and drive customer engagement. With <strong>2000+ projects</strong> across <strong>100+ cities</strong>, we bring corporate-level expertise with a personal approach.</p>
-  </section>  <section id="whyus">
+    <p><strong>2000+ Corporate Agency-provided 360 Projects</strong> across <strong>100+ Cities</strong> and <strong>7+ States</strong>. 
+    Also completed <strong>20+ Freelance Projects</strong> including GMB Setup & Verification, 360 Virtual Tours, and GMB Optimization.</p>
+  </section>
+
+  <section id="whyus">
     <h2>Why Choose Us?</h2>
     <div style="display:flex; flex-wrap:wrap; gap:1.5em; justify-content:center;">
       <div><h3>Proven Expertise</h3><p>2000+ projects delivered with measurable growth outcomes.</p></div>
       <div><h3>Local SEO Mastery</h3><p>Specialized in Google Maps and Search visibility strategies.</p></div>
       <div><h3>End-to-End Service</h3><p>From audits to virtual tours, we manage everything for you.</p></div>
     </div>
-  </section>  <section id="services">
+  </section>
+
+  <section id="services">
     <h2>Our Services</h2>
     <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1.5em;">
       <div><h3>360° Virtual Tours</h3><p>Google Street View Trusted immersive experiences.</p></div>
@@ -99,60 +129,76 @@ footer a {color:#fff; text-decoration:none;}
       <div><h3>Reputation Management</h3><p>Boost online reviews & build lasting trust with your audience.</p></div>
       <div><h3>Local SEO Consulting</h3><p>Enhance map rankings and local search visibility.</p></div>
     </div>
-  </section>  <section id="testimonials">
+  </section>
+
+  <section id="testimonials">
     <h2>What Clients Say</h2>
     <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:1.5em;">
       <div><p>"Excellent service, our store now looks perfect on Google Maps!"</p><p><strong>– Local Store Owner</strong></p></div>
       <div><p>"Got more walk-in customers after the 360° tour was added."</p><p><strong>– Restaurant Manager</strong></p></div>
       <div><p>"Quick setup, professional team, highly recommended."</p><p><strong>– Café Partner</strong></p></div>
     </div>
-  </section>  <section id="quicklinks">
+  </section>
+
+  <!-- Quick Links with Icons -->
+  <section id="quicklinks">
     <h2>Quick Links</h2>
     <ul>
-      <li><a href="https://pages.razorpay.com/stores/st_QjTdp5R6BxMsx6" target="_blank" rel="noopener noreferrer">Pay Online</a></li>
-      <li><a href="https://wa.me/917795524316" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
-      <li><a href="https://www.linkedin.com/company/geoclicks360" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://www.instagram.com/geoclicks360/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-      <li><a href="https://www.facebook.com/profile.php?id=61577975815327" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-      <li><a href="https://x.com/GeoClicks360" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
+      <li><a href="https://pages.razorpay.com/stores/st_QjTdp5R6BxMsx6" target="_blank">
+        💳 Pay Online</a></li>
+      <li><a href="https://wa.me/917795524316" target="_blank">📱 WhatsApp Us</a></li>
+      <li><a href="https://www.linkedin.com/company/geoclicks360" target="_blank">🔗 LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/geoclicks360/" target="_blank">📷 Instagram</a></li>
+      <li><a href="https://www.facebook.com/profile.php?id=61577975815327" target="_blank">📘 Facebook</a></li>
+      <li><a href="https://x.com/GeoClicks360" target="_blank">🐦 X (Twitter)</a></li>
     </ul>
-  </section>  <section id="tours">
+  </section>
+
+  <section id="tours">
     <h2>🌍 Virtual Tours & Maps</h2>
     <div style="display:flex; flex-wrap:wrap; gap:1em; justify-content:center;">
-      <iframe title="GeoClicks360 Virtual Tour 1" src="https://www.google.com/maps/d/embed?mid=19hZF9_swcUy3FXgnd_wsg6WfdN4keLE&ehbc=2E312F" loading="lazy"></iframe>
-      <iframe title="GeoClicks360 Virtual Tour 2" src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F" loading="lazy"></iframe>
-      <iframe title="GeoClicks360 Virtual Tour 3" src="https://www.google.com/maps/embed?pb=!4v1751126866328!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3cGlKYmc.!2m2!1d13.14607855989636!2d77.56991140909241!3f100!4f0!5f0.4000000000000002" loading="lazy"></iframe>
-      <iframe title="GeoClicks360 Virtual Tour 4" src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06970479489355!4f10.919448374596612!5f0.4000000000000002" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/d/embed?mid=19hZF9_swcUy3FXgnd_wsg6WfdN4keLE&ehbc=2E312F"></iframe>
+      <iframe src="https://www.google.com/maps/d/embed?mid=1Bfgv9RzRxYnNIPAEP4o8l-cEyifbp3k&ehbc=2E312F"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1751126866328!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJQ1Y3cGlKYmc.!2m2!1d13.14607855989636!2d77.56991140909241!3f100!4f0!5f0.4"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1751127032495!6m8!1m7!1sCAoSF0NJSE0wb2dLRUlDQWdJREZ4c21XdVFF!2m2!1d13.25279622268359!2d77.71579579198425!3f12.06!4f10.9!5f0.4"></iframe>
     </div>
-  </section>  <!-- Contact Us Section -->  <section id="contact">
+  </section>
+
+  <section id="contact">
     <h2>Contact Us</h2>
     <p>We’d love to hear from you! Please reach out using the form below or our contact details.</p>
     <form action="https://formspree.io/f/xwpqbvww" method="POST" id="contact-form">
       <input type="hidden" name="_subject" value="New Lead from GeoClicks360 Website" />
       <input type="text" name="_gotcha" style="display:none;" />
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your Name" required />
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Your Email" required />
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
       <div id="form-status" aria-live="polite"></div>
     </form>
     <p><strong>Email:</strong> geoclicks360@gmail.com | <strong>Phone:</strong> +91 77955 24316</p>
     <div class="map">
-      <iframe title="GeoClicks360 Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.086456173367!2d77.59456231527852!3d12.97159899085752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670f3a9f6c5%3A0x7f0b2a086e4e18e2!2sBengaluru!5e0!3m2!1sen!2sin!4v1751127600000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.086456173367!2d77.59456231527852!3d12.97159899085752!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670f3a9f6c5%3A0x7f0b2a086e4e18e2!2sBengaluru!5e0!3m2!1sen!2sin!4v1751127600000" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
-  </section>  <footer>
+  </section>
+
+  <footer>
     <p>&copy; 2025 GeoClicks360. All rights reserved.</p>
     <p>Address: Bengaluru, India | <a href="policies.html">Policies & Terms</a></p>
-  </footer>  <script>
+  </footer>
+
+  <script>
     const toggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
     toggle.addEventListener('click', () => nav.classList.toggle('active'));
     nav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => nav.classList.remove('active')));
 
-    // Enhanced form feedback
+    // Contact form feedback
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
-
     form.addEventListener('submit', async function(e){
       e.preventDefault();
       const data = new FormData(form);
@@ -163,11 +209,33 @@ footer a {color:#fff; text-decoration:none;}
       }).then(response => {
         if (response.ok) {
           status.textContent = "✅ Thank you! We received your message and will reply soon.";
+          status.className = "success";
           form.reset();
         } else {
           status.textContent = "⚠️ Oops! There was a problem sending your message.";
+          status.className = "error";
         }
-      }).catch(() => status.textContent = "⚠️ Oops! There was a problem sending your message.");
+      }).catch(() => {
+        status.textContent = "⚠️ Oops! There was a problem sending your message.";
+        status.className = "error";
+      });
     });
-  </script></body>
+
+    // Counter animation
+    document.querySelectorAll('.counter').forEach(counter => {
+      const updateCount = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100;
+        if(count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCount, 20);
+        } else {
+          counter.innerText = target + "+";
+        }
+      };
+      updateCount();
+    });
+  </script>
+</body>
 </html>
